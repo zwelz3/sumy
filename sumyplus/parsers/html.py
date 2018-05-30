@@ -31,6 +31,7 @@ class HtmlParser(DocumentParser):
 
     @classmethod
     def from_url(cls, url, tokenizer):
+        # todo replace with urllib
         data = fetch_url(url)
         return cls(data, tokenizer, url)
 
