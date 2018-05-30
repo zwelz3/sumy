@@ -5,7 +5,10 @@ from __future__ import division, print_function, unicode_literals
 
 import sys
 import requests
-import pkgutil
+
+import nltk
+nltk.download('stopwords')  # todo better way to check if this needs to be done
+from nltk.corpus import stopwords
 
 from functools import wraps
 from contextlib import closing
@@ -65,10 +68,10 @@ def expand_resource_path(path):
 def get_stop_words(language):
     language = normalize_language(language)
     try:
-        stopwords_data = pkgutil.get_data("sumyplus", "data/stopwords/%s.txt" % language)
+        stopwords_data = frozenset(stopwords.words(language))
     except IOError as e:
         raise LookupError("Stop-words are not available for language %s." % language)
-    return parse_stop_words(stopwords_data)
+    return stopwords_data
 
 
 def read_stop_words(filename):
