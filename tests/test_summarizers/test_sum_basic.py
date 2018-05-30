@@ -4,9 +4,9 @@ from __future__ import absolute_import, division, print_function, unicode_litera
 
 import pytest
 
-from sumy.models.dom._sentence import Sentence
-from sumy.nlp.tokenizers import Tokenizer
-from sumy.summarizers.sum_basic import SumBasicSummarizer
+from sumyplus.models.dom._sentence import Sentence
+from sumyplus.nlp.tokenizers import Tokenizer
+from sumyplus.summarizers.sum_basic import SumBasicSummarizer
 from ..utils import build_document
 
 

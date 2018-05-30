@@ -5,10 +5,10 @@ from __future__ import division, print_function, unicode_literals
 
 import pytest
 
-import sumy.summarizers.text_rank as text_rank_module
-from sumy.summarizers.text_rank import TextRankSummarizer
-from sumy.nlp.stemmers import Stemmer
-from sumy._compat import to_unicode
+import sumyplus.summarizers.text_rank as text_rank_module
+from sumyplus.summarizers.text_rank import TextRankSummarizer
+from sumyplus.nlp.stemmers import Stemmer
+from sumyplus._compat import to_unicode
 from ..utils import build_document
 
 

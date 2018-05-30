@@ -4,7 +4,7 @@ from __future__ import absolute_import, division, print_function, unicode_litera
 
 import pytest
 
-from sumy.summarizers.luhn import LuhnSummarizer
+from sumyplus.summarizers.luhn import LuhnSummarizer
 from ..utils import build_sentence
 
 

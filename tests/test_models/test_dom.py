@@ -4,9 +4,9 @@ from __future__ import absolute_import, division, print_function, unicode_litera
 
 import pytest
 
-from sumy._compat import to_unicode
-from sumy.models.dom import Paragraph, Sentence
-from sumy.nlp.tokenizers import Tokenizer
+from sumyplus._compat import to_unicode
+from sumyplus.models.dom import Paragraph, Sentence
+from sumyplus.nlp.tokenizers import Tokenizer
 from ..utils import build_document, build_document_from_string
 
 

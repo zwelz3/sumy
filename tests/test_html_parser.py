@@ -2,9 +2,9 @@
 
 from __future__ import absolute_import, division, print_function, unicode_literals
 
-from sumy._compat import to_unicode
-from sumy.nlp.tokenizers import Tokenizer
-from sumy.parsers.html import HtmlParser
+from sumyplus._compat import to_unicode
+from sumyplus.nlp.tokenizers import Tokenizer
+from sumyplus.parsers.html import HtmlParser
 from .utils import expand_resource_path
 
 

@@ -2,8 +2,8 @@
 
 from __future__ import absolute_import, division, print_function, unicode_literals
 
-from sumy._compat import to_unicode
-from sumy.summarizers.random import RandomSummarizer
+from sumyplus._compat import to_unicode
+from sumyplus.summarizers.random import RandomSummarizer
 from ..utils import build_document, build_document_from_string
 
 

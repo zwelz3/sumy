@@ -57,7 +57,7 @@ class KLSummarizer(AbstractSummarizer):
         """
         Computes the normalized term frequency as explained in http://www.tfidf.com/
 
-        :type sentences: [sumy.models.dom.Sentence]
+        :type sentences: [sumyplus.models.dom.Sentence]
         """
         content_words = self._get_all_content_words_in_doc(sentences)
         content_words_count = len(content_words)

@@ -77,40 +77,40 @@ installed. Run simply (preferred way):
 
 .. code:: sh
 
-    $ [sudo] pip install sumy
+    $ [sudo] pip install sumyplus
 
 Or for the fresh version:
 
 .. code:: sh
 
-    $ [sudo] pip install git+git://github.com/miso-belica/sumy.git
+    $ [sudo] pip install git+git://github.com/miso-belica/sumyplus.git
 
 Usage
 -----
 
-Sumy contains command line utility for quick summarization of documents.
+sumyplus contains command line utility for quick summarization of documents.
 
 .. code:: sh
 
-    $ sumy lex-rank --length=10 --url=http://en.wikipedia.org/wiki/Automatic_summarization # what's summarization?
-    $ sumy luhn --language=czech --url=http://www.zdrojak.cz/clanky/automaticke-zabezpeceni/
-    $ sumy edmundson --language=czech --length=3% --url=http://cs.wikipedia.org/wiki/Bitva_u_Lipan
-    $ sumy --help # for more info
+    $ sumyplus lex-rank --length=10 --url=http://en.wikipedia.org/wiki/Automatic_summarization # what's summarization?
+    $ sumyplus luhn --language=czech --url=http://www.zdrojak.cz/clanky/automaticke-zabezpeceni/
+    $ sumyplus edmundson --language=czech --length=3% --url=http://cs.wikipedia.org/wiki/Bitva_u_Lipan
+    $ sumyplus --help # for more info
 
 Various evaluation methods for some summarization method can be executed
 by commands below:
 
 .. code:: sh
 
-    $ sumy_eval lex-rank reference_summary.txt --url=http://en.wikipedia.org/wiki/Automatic_summarization
-    $ sumy_eval lsa reference_summary.txt --language=czech --url=http://www.zdrojak.cz/clanky/automaticke-zabezpeceni/
-    $ sumy_eval edmundson reference_summary.txt --language=czech --url=http://cs.wikipedia.org/wiki/Bitva_u_Lipan
-    $ sumy_eval --help # for more info
+    $ sumyplus_eval lex-rank reference_summary.txt --url=http://en.wikipedia.org/wiki/Automatic_summarization
+    $ sumyplus_eval lsa reference_summary.txt --language=czech --url=http://www.zdrojak.cz/clanky/automaticke-zabezpeceni/
+    $ sumyplus_eval edmundson reference_summary.txt --language=czech --url=http://cs.wikipedia.org/wiki/Bitva_u_Lipan
+    $ sumyplus_eval --help # for more info
 
 Python API
 ----------
 
-Or you can use sumy like a library in your project.
+Or you can use sumyplus like a library in your project.
 
 .. code:: python
 
@@ -119,12 +119,12 @@ Or you can use sumy like a library in your project.
     from __future__ import absolute_import
     from __future__ import division, print_function, unicode_literals
 
-    from sumy.parsers.html import HtmlParser
-    from sumy.parsers.plaintext import PlaintextParser
-    from sumy.nlp.tokenizers import Tokenizer
-    from sumy.summarizers.lsa import LsaSummarizer as Summarizer
-    from sumy.nlp.stemmers import Stemmer
-    from sumy.utils import get_stop_words
+    from sumyplus.parsers.html import HtmlParser
+    from sumyplus.parsers.plaintext import PlaintextParser
+    from sumyplus.nlp.tokenizers import Tokenizer
+    from sumyplus.summarizers.lsa import LsaSummarizer as Summarizer
+    from sumyplus.nlp.stemmers import Stemmer
+    from sumyplus.utils import get_stop_words
 
 
     LANGUAGE = "czech"
@@ -159,5 +159,5 @@ Run tests via
 
     $ py.test-2.7 && py.test-3.3 && py.test-3.4 && py.test-3.5
 
-.. |image| image:: https://api.travis-ci.org/miso-belica/sumy.png?branch=master
-   :target: https://travis-ci.org/miso-belica/sumy
+.. |image| image:: https://api.travis-ci.org/miso-belica/sumyplus.png?branch=master
+   :target: https://travis-ci.org/miso-belica/sumyplus

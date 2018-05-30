@@ -6,7 +6,7 @@ from __future__ import division, print_function, unicode_literals
 import pytest
 from pytest import approx
 
-from sumy.evaluation import precision, recall, f_score
+from sumyplus.evaluation import precision, recall, f_score
 
 
 def test_precision_empty_evaluated():

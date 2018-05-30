@@ -4,8 +4,8 @@ from __future__ import absolute_import, division, print_function, unicode_litera
 
 import pytest
 
-from sumy._compat import to_unicode
-from sumy.summarizers.edmundson import EdmundsonSummarizer
+from sumyplus._compat import to_unicode
+from sumyplus.summarizers.edmundson import EdmundsonSummarizer
 from ..utils import build_document, build_document_from_string
 
 

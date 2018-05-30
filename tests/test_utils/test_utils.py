@@ -4,7 +4,7 @@ from __future__ import absolute_import, division, print_function, unicode_litera
 
 import pytest
 
-from sumy.utils import get_stop_words, read_stop_words, ItemsCount, \
+from sumyplus.utils import get_stop_words, read_stop_words, ItemsCount, \
     normalize_language
 from ..utils import expand_resource_path
 

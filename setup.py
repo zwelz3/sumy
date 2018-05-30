@@ -14,13 +14,13 @@ with open("README.rst") as readme:
 
 # https://blog.ionelmc.ro/presentations/packaging/
 setup(
-    name="sumy",
+    name="sumyplus",
     version="0.7.0",
     description="Module for automatic summarization of text documents and HTML pages.",
     long_description=long_description,
     author="Michal Belica",
     author_email="miso.belica@gmail.com",
-    url="https://github.com/miso-belica/sumy",
+    url="https://github.com/miso-belica/sumyplus",
     license="Apache License, Version 2.0",
     keywords=[
         "data mining",
@@ -53,15 +53,15 @@ setup(
         "Chinese": ["jieba"],
     },
     packages=find_packages(),
-    package_data={"sumy": [
+    package_data={"sumyplus": [
         "data/stopwords/*.txt",
     ]},
     entry_points={
         "console_scripts": [
-            "sumy = sumy.__main__:main",
-            "sumy-%s = sumy.__main__:main" % VERSION_SUFFIX,
-            "sumy_eval = sumy.evaluation.__main__:main",
-            "sumy_eval-%s = sumy.evaluation.__main__:main" % VERSION_SUFFIX,
+            "sumyplus = sumyplus.__main__:main",
+            "sumyplus-%s = sumyplus.__main__:main" % VERSION_SUFFIX,
+            "sumyplus_eval = sumyplus.evaluation.__main__:main",
+            "sumyplus_eval-%s = sumyplus.evaluation.__main__:main" % VERSION_SUFFIX,
         ]
     },
     classifiers=[

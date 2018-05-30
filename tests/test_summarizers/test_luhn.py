@@ -2,12 +2,12 @@
 
 from __future__ import absolute_import, division, print_function, unicode_literals
 
-from sumy._compat import to_unicode
-from sumy.nlp.stemmers.czech import stem_word
-from sumy.nlp.tokenizers import Tokenizer
-from sumy.parsers.plaintext import PlaintextParser
-from sumy.summarizers.luhn import LuhnSummarizer
-from sumy.utils import get_stop_words
+from sumyplus._compat import to_unicode
+from sumyplus.nlp.stemmers.czech import stem_word
+from sumyplus.nlp.tokenizers import Tokenizer
+from sumyplus.parsers.plaintext import PlaintextParser
+from sumyplus.summarizers.luhn import LuhnSummarizer
+from sumyplus.utils import get_stop_words
 from ..utils import build_document
 
 

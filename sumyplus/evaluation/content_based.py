@@ -17,7 +17,7 @@ def cosine_similarity(evaluated_model, reference_model):
     """
     if not (isinstance(evaluated_model, TfModel) and isinstance(reference_model, TfModel)):
         raise ValueError(
-            "Arguments has to be instances of 'sumy.models.TfDocumentModel'")
+            "Arguments has to be instances of 'sumyplus.models.TfDocumentModel'")
 
     terms = frozenset(evaluated_model.terms) | frozenset(reference_model.terms)
 
@@ -44,7 +44,7 @@ def unit_overlap(evaluated_model, reference_model):
     """
     if not (isinstance(evaluated_model, TfModel) and isinstance(reference_model, TfModel)):
         raise ValueError(
-            "Arguments has to be instances of 'sumy.models.TfDocumentModel'")
+            "Arguments has to be instances of 'sumyplus.models.TfDocumentModel'")
 
     terms1 = frozenset(evaluated_model.terms)
     terms2 = frozenset(reference_model.terms)

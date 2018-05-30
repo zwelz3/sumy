@@ -4,7 +4,7 @@ from __future__ import absolute_import, division, print_function, unicode_litera
 
 import pytest
 
-from sumy.nlp.tokenizers import Tokenizer
+from sumyplus.nlp.tokenizers import Tokenizer
 
 
 def test_missing_language():

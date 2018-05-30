@@ -3,9 +3,9 @@
 from __future__ import absolute_import
 from __future__ import division, print_function, unicode_literals
 
-from sumy.summarizers.reduction import ReductionSummarizer
-from sumy.nlp.stemmers import Stemmer
-from sumy._compat import to_unicode
+from sumyplus.summarizers.reduction import ReductionSummarizer
+from sumyplus.nlp.stemmers import Stemmer
+from sumyplus._compat import to_unicode
 from ..utils import build_document
 
 

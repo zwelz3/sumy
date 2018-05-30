@@ -5,10 +5,10 @@ from __future__ import division, print_function, unicode_literals
 
 from pytest import approx
 
-from sumy.evaluation import rouge_n, rouge_l_sentence_level, rouge_l_summary_level
-from sumy.evaluation.rouge import _get_ngrams, _split_into_words, _get_word_ngrams, _len_lcs, _recon_lcs, _union_lcs
-from sumy.nlp.tokenizers import Tokenizer
-from sumy.parsers.plaintext import PlaintextParser
+from sumyplus.evaluation import rouge_n, rouge_l_sentence_level, rouge_l_summary_level
+from sumyplus.evaluation.rouge import _get_ngrams, _split_into_words, _get_word_ngrams, _len_lcs, _recon_lcs, _union_lcs
+from sumyplus.nlp.tokenizers import Tokenizer
+from sumyplus.parsers.plaintext import PlaintextParser
 
 
 def test_get_ngrams():

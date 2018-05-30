@@ -4,8 +4,8 @@ from __future__ import absolute_import, division, print_function, unicode_litera
 
 import pytest
 
-from sumy.models import TfDocumentModel
-from sumy.nlp.tokenizers import Tokenizer
+from sumyplus.models import TfDocumentModel
+from sumyplus.nlp.tokenizers import Tokenizer
 
 
 def test_no_tokenizer_with_string():

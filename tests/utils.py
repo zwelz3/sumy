@@ -9,9 +9,9 @@ except ImportError:
     from io import StringIO
 
 from os.path import dirname, join, abspath
-from sumy.nlp.tokenizers import Tokenizer
-from sumy._compat import to_string, to_unicode
-from sumy.models.dom import ObjectDocumentModel, Paragraph, Sentence
+from sumyplus.nlp.tokenizers import Tokenizer
+from sumyplus._compat import to_string, to_unicode
+from sumyplus.models.dom import ObjectDocumentModel, Paragraph, Sentence
 
 
 _TOKENIZER = Tokenizer("czech")

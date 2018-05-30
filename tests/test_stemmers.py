@@ -6,7 +6,7 @@ from __future__ import absolute_import, division, print_function, unicode_litera
 
 import pytest
 
-from sumy.nlp.stemmers import null_stemmer, Stemmer
+from sumyplus.nlp.stemmers import null_stemmer, Stemmer
 
 
 def test_missing_stemmer_language():

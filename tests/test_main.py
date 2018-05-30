@@ -5,7 +5,7 @@ from __future__ import absolute_import, division, print_function, unicode_litera
 import pytest
 from docopt import docopt, DocoptExit
 
-from sumy.__main__ import __doc__ as main_doc, handle_arguments, to_string, __version__
+from sumyplus.__main__ import __doc__ as main_doc, handle_arguments, to_string, __version__
 from .utils import StringIO
 
 

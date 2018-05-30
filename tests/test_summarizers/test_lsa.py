@@ -4,13 +4,13 @@ from __future__ import absolute_import, division, print_function, unicode_litera
 
 import pytest
 
-import sumy.summarizers.lsa as lsa_module
-from sumy._compat import to_unicode
-from sumy.nlp.stemmers import Stemmer
-from sumy.nlp.tokenizers import Tokenizer
-from sumy.parsers.plaintext import PlaintextParser
-from sumy.summarizers.lsa import LsaSummarizer
-from sumy.utils import get_stop_words
+import sumyplus.summarizers.lsa as lsa_module
+from sumyplus._compat import to_unicode
+from sumyplus.nlp.stemmers import Stemmer
+from sumyplus.nlp.tokenizers import Tokenizer
+from sumyplus.parsers.plaintext import PlaintextParser
+from sumyplus.summarizers.lsa import LsaSummarizer
+from sumyplus.utils import get_stop_words
 from ..utils import build_document, load_resource
 
 
@@ -103,7 +103,7 @@ def test_article_example():
 
 
 def test_issue_5_svd_converges():
-    """Source: https://github.com/miso-belica/sumy/issues/5"""
+    """Source: https://github.com/miso-belica/sumyplus/issues/5"""
     pytest.skip("Can't reproduce the issue.")
 
     parser = PlaintextParser.from_string(

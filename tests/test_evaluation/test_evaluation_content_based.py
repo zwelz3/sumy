@@ -6,9 +6,9 @@ from __future__ import division, print_function, unicode_literals
 import pytest
 from pytest import approx
 
-from sumy.evaluation import cosine_similarity, unit_overlap
-from sumy.models import TfDocumentModel
-from sumy.nlp.tokenizers import Tokenizer
+from sumyplus.evaluation import cosine_similarity, unit_overlap
+from sumyplus.models import TfDocumentModel
+from sumyplus.nlp.tokenizers import Tokenizer
 
 
 def test_wrong_arguments():

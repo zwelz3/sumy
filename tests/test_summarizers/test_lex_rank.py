@@ -8,12 +8,12 @@ import math
 import numpy
 import pytest
 
-import sumy.summarizers.lex_rank as lex_rank_module
-from sumy.nlp.stemmers.czech import stem_word
-from sumy.nlp.tokenizers import Tokenizer
-from sumy.parsers.plaintext import PlaintextParser
-from sumy.summarizers.lex_rank import LexRankSummarizer
-from sumy.utils import get_stop_words
+import sumyplus.summarizers.lex_rank as lex_rank_module
+from sumyplus.nlp.stemmers.czech import stem_word
+from sumyplus.nlp.tokenizers import Tokenizer
+from sumyplus.parsers.plaintext import PlaintextParser
+from sumyplus.summarizers.lex_rank import LexRankSummarizer
+from sumyplus.utils import get_stop_words
 from ..utils import build_document, load_resource
 
 
@@ -79,7 +79,7 @@ def test_cosine_similarity_for_the_same_sentence_with_duplicate_words_should_be_
     """
     We compute similarity of the same sentences. These should be exactly the same and
     therefor have similarity close to 1.0.
-    see https://github.com/miso-belica/sumy/issues/58
+    see https://github.com/miso-belica/sumyplus/issues/58
     """
     sentence1 = ["this", "sentence", "is", "simple", "sentence"]
     tf1 = {"this": 1/2, "sentence": 1.0, "is": 1/2, "simple": 1/2}
@@ -102,7 +102,7 @@ def test_cosine_similarity_sentences_with_no_common_word_should_be_zero():
     """
     We compute similarity of the sentences without single common word.
     These are considered dissimilar so have similarity close to 0.0.
-    see https://github.com/miso-belica/sumy/issues/58
+    see https://github.com/miso-belica/sumyplus/issues/58
     """
     sentence1 = ["this", "sentence", "is", "simple", "sentence"]
     tf1 = {"this": 1/2, "sentence": 1.0, "is": 1/2, "simple": 1/2}
@@ -144,7 +144,7 @@ def test_document_is_all_in_upper_case():
     When all words is in upper case Plaintext parser first line as heading and
     LexRank algorithm raises exception "ZeroDivisionError: float division by zero"
     because there is no sentence to summarize.
-    See https://github.com/miso-belica/sumy/issues/25
+    See https://github.com/miso-belica/sumyplus/issues/25
     """
     parser = PlaintextParser.from_string(
         "JUST WRITING SOME TEXT. TO TEST CASE. WITH ZERO SENTENCES RETURNED. FROM TOKENIZER.",
@@ -158,7 +158,7 @@ def test_document_is_all_in_upper_case():
 
 
 def test_power_method_should_return_different_scores_for_sentences():
-    """See https://github.com/miso-belica/sumy/issues/26"""
+    """See https://github.com/miso-belica/sumyplus/issues/26"""
     matrix = numpy.array([
         [0.1, 0.2, 0.3, 0.6, 0.9],
         [0.45, 0, 0.3, 0.6, 0],

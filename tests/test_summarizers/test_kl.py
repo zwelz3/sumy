@@ -5,9 +5,9 @@ from __future__ import division, print_function, unicode_literals
 
 import pytest
 
-from sumy.models.dom._sentence import Sentence
-from sumy.nlp.tokenizers import Tokenizer
-from sumy.summarizers.kl import KLSummarizer
+from sumyplus.models.dom._sentence import Sentence
+from sumyplus.nlp.tokenizers import Tokenizer
+from sumyplus.summarizers.kl import KLSummarizer
 from ..utils import build_document
 
 
@@ -105,7 +105,7 @@ def test_kl_divergence(summarizer):
 def test_missing_word_in_document_during_kl_divergence_computation(summarizer):
     """
     Missing word should not affect the result.
-    See https://github.com/miso-belica/sumy/issues/41
+    See https://github.com/miso-belica/sumyplus/issues/41
     """
     EPS = 0.00001
 
@@ -119,7 +119,7 @@ def test_missing_word_in_document_during_kl_divergence_computation(summarizer):
 
 
 def test_tf_idf_metric_should_be_real_number():
-    """https://github.com/miso-belica/sumy/issues/41"""
+    """https://github.com/miso-belica/sumyplus/issues/41"""
     summarizer = KLSummarizer()
     frequencies = summarizer.compute_tf([Sentence("There are five words, jop.", Tokenizer("english"))])
 
