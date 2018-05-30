@@ -5,8 +5,6 @@ from __future__ import division, print_function, unicode_literals
 
 import nltk.stem.snowball as nltk_stemmers_module
 
-from .czech import stem_word as czech_stemmer
-
 from ..._compat import to_unicode
 from ...utils import normalize_language
 
@@ -17,19 +15,9 @@ def null_stemmer(object):
 
 
 class Stemmer(object):
-    SPECIAL_STEMMERS = {
-        'czech': czech_stemmer,
-        'slovak': czech_stemmer,
-        'chinese': null_stemmer,
-        'japanese': null_stemmer
-    }
-
     def __init__(self, language):
         language = normalize_language(language)
         self._stemmer = null_stemmer
-        if language.lower() in self.SPECIAL_STEMMERS:
-            self._stemmer = self.SPECIAL_STEMMERS[language.lower()]
-            return
         stemmer_classname = language.capitalize() + 'Stemmer'
         try:
             stemmer_class = getattr(nltk_stemmers_module, stemmer_classname)
