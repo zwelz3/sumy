@@ -1,0 +1,1 @@
+https://www.quora.com/How-do-I-separate-bold-and-italic-characters-while-reading-a-file-in-Python
