@@ -40,7 +40,6 @@ setup(
         "requests>=2.7.0",
         "pycountry>=18.2.23",
         "nltk>=3.0.2,<3.2.0" if VERSION_SUFFIX == "3.3" else "nltk>=3.0.2",  # NLTK 3.2 dropped support for Python 3.3
-        "pdfminer.six>=3.0"
     ],
     tests_require=[
         "pytest>=3.0.0",
