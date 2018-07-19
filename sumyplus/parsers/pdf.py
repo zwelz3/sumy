@@ -8,7 +8,7 @@ sumypath = sumyplus.__path__[0]
 popplerpath = sumypath+"\\poppler-lite\\"
 pdftohtml_exe = popplerpath+"pdftohtml.exe"
 
-args = "-s"
+args = "-s -c -noframes"
 
 
 class PdfParser(object):
@@ -18,7 +18,7 @@ class PdfParser(object):
         super(PdfParser, self).__init__()
 
         self.pdf_file = pdf_file
-        self.html_filename = pdf_file.split('.')[0] + '-html.html'
+        self.html_filename = pdf_file.split('.')[0] + '.html'
         self.tokenizer = tokenizer
         #
         process_call = self.create_process()
