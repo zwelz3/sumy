@@ -4,15 +4,12 @@ import sumyplus
 
 from .html import HtmlParser
 
-sumypath = sumyplus.__path__[0]
-popplerpath = sumypath+"\\poppler-lite\\"
-pdftohtml_exe = popplerpath+"pdftohtml.exe"
-
-args = "-s -c -noframes"
-
 
 class PdfParser(object):
     """Parser of text from PDF format into DOM."""
+    poppler_path = os.path.join(sumyplus.__path__[0], "poppler-lite\\")
+    pdftohtml_exe = "\"" + poppler_path + "pdftohtml.exe" + "\""
+    args = "-s -c -noframes"
 
     def __init__(self, pdf_file, tokenizer):
         super(PdfParser, self).__init__()
@@ -25,9 +22,10 @@ class PdfParser(object):
         self.pdf2html(process_call)
 
     def create_process(self):
-        return ' '.join([pdftohtml_exe, args, self.pdf_file])
+        return ' '.join([self.pdftohtml_exe, self.args, self.pdf_file])
 
     def pdf2html(self, process_call):
+        print('Using poppler executable for pdf parsing, ', self.pdftohtml_exe, '\n')
         if os.path.isfile(self.html_filename):
             os.remove(self.html_filename)
         flag = subprocess.call(process_call, shell=False)
